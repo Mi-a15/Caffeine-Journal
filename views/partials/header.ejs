@@ -1,0 +1,22 @@
+
+    <div class="header">
+        <ul class="header-opts">
+            <li>About us</li>
+            <li>Blog</li>
+            <li><a class="atag" href="/contact">Contact</a></li>
+        </ul>
+        <h1 class="title"><a class="atag" href="/">Caffeine Journal</a></h1>
+        <div class="header-opts-end">
+            <form class="header-search" action="./search/">
+                <input class="searchPop hide" type="search" id="movie" name="q" style="border: none; border-bottom: 1px solid black;" />
+                <button class="searchbtn btn1 btn" type="submit"><img src="/images/icon _search_.png"></button>
+            </form>
+            <div class="user-icon">
+                <button class="userbtn btn1 btn" type="button" action="/search/"><img src="/images/icon _user_.png"></button>
+                <% if(locals.cusname){ %><p>Hi, <span id="name-hl"><%=cusname%>!</span></p>
+                <%} else {%><p>Hi, There!</p>
+                <%}%>
+            </div>
+        </div>
+        
+    </div>
