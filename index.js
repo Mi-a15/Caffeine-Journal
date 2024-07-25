@@ -4,7 +4,7 @@ import geoip from "geoip-lite";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;;
 
 
 app.use(express.static("public"));
@@ -28,7 +28,7 @@ app.post('/welcome', async(req, res)=>{
         res.render("welcome.ejs",{
             cusname:req.body.cusName,
             city:geo.city,
-            
+
 
         })
     }
